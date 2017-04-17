@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.rvrjc.portal.model.impl.AddressModelImpl">
+		<attributes>
+			<id name="addressId" />
+			<basic name="doorNo" />
+			<basic name="city" />
+			<basic name="mandal" />
+			<basic name="district" />
+			<basic name="state">
+				<column name="STATE_" />
+			</basic>
+			<basic name="addCountry" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.rvrjc.portal.model.impl.CourseModelImpl">
+		<attributes>
+			<id name="cno" />
+			<basic name="ccode" />
+			<basic name="cname" />
+			<basic name="cfee" />
+			<basic name="cdescription" />
+			<basic name="createdOn">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="createdBy" />
+			<basic name="modifiedOn">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedBy" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.rvrjc.portal.model.impl.DepartmentModelImpl">
+		<attributes>
+			<id name="dno" />
+			<basic name="dname" />
+			<basic name="createdOn">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="createdBy" />
+			<basic name="modifiedOn">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedBy" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.rvrjc.portal.model.impl.InvoiceModelImpl">
+		<attributes>
+			<id name="invoiceId" />
+			<basic name="amountPaid" />
+			<basic name="paidDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="sno" />
+			<basic name="createdOn">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="createdBy" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.rvrjc.portal.model.impl.ParentModelImpl">
+		<attributes>
+			<id name="parentId" />
+			<basic name="nickName" />
+			<basic name="firstName" />
+			<basic name="middleName" />
+			<basic name="lastName" />
+			<basic name="phNo" />
+			<basic name="email" />
+			<basic name="relationShip" />
+			<basic name="createdOn">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="createdBy" />
+			<basic name="modifiedOn">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedBy" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.rvrjc.portal.model.impl.StudentModelImpl">
+		<attributes>
+			<id name="sno" />
+			<basic name="firstName" />
+			<basic name="middleName" />
+			<basic name="lastName" />
+			<basic name="gender" />
+			<basic name="dateOfBirth">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="email" />
+			<basic name="emcetRank" />
+			<basic name="dno" />
+			<basic name="addressId" />
+			<basic name="liferayUserId" />
+			<basic name="createdOn">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="createdBy" />
+			<basic name="modifiedOn">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedBy" />
+			<transient name="liferayUserUuid" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.rvrjc.portal.model.impl.TeacherModelImpl">
+		<attributes>
+			<id name="tid" />
+			<basic name="firstName" />
+			<basic name="middleName" />
+			<basic name="lastName" />
+			<basic name="gender" />
+			<basic name="email" />
+			<basic name="phno" />
+			<basic name="liferayUserId" />
+			<transient name="liferayUserUuid" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.rvrjc.portal.model.impl.AddressImpl" name="Address">
+		<table name="rvrjc_Address" />
+		<attributes />
+	</entity>
+	<entity class="com.rvrjc.portal.model.impl.CourseImpl" name="Course">
+		<table name="rvrjc_Course" />
+		<attributes />
+	</entity>
+	<entity class="com.rvrjc.portal.model.impl.DepartmentImpl" name="Department">
+		<table name="rvrjc_Department" />
+		<attributes />
+	</entity>
+	<entity class="com.rvrjc.portal.model.impl.InvoiceImpl" name="Invoice">
+		<table name="rvrjc_Invoice" />
+		<attributes />
+	</entity>
+	<entity class="com.rvrjc.portal.model.impl.ParentImpl" name="Parent">
+		<table name="rvrjc_Parent" />
+		<attributes />
+	</entity>
+	<entity class="com.rvrjc.portal.model.impl.StudentImpl" name="Student">
+		<table name="rvrjc_Student" />
+		<attributes />
+	</entity>
+	<entity class="com.rvrjc.portal.model.impl.TeacherImpl" name="Teacher">
+		<table name="rvrjc_Teacher" />
+		<attributes />
+	</entity>
+</entity-mappings>

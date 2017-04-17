@@ -4,5 +4,142 @@
 	<author>suresh</author>
 	<namespace>rvrjc</namespace>
 
-	<entity name=""></entity>
+	<entity name="Department" local-service="true" remote-service="false">
+		<column name="dno" type="long" primary="true" id-type="increment"></column>
+		<column name="dname" type="String"></column>
+		<!-- Audit fields -->
+		<column name="createdOn" type="Date"></column>
+		<column name="createdBy" type="String"></column>
+		<column name="modifiedOn" type="Date"></column>
+		<column name="modifiedBy" type="String"></column>
+		<!-- Order -->
+		<order by="asc">
+			<order-column name="dno"></order-column>
+		</order>
+		<!-- Finder methods -->
+		<finder name="deptName" return-type="Department">
+			<finder-column name="dname"></finder-column>
+		</finder>
+	</entity>
+	<entity name="Course" local-service="true" remote-service="false">
+		<column name="cno" type="long" primary="true" id-type="increment"></column>
+		<column name="ccode" type="String"></column>
+		<column name="cname" type="String"></column>
+		<column name="cfee" type="int"></column>
+		<column name="cdescription" type="String"></column>
+		
+		
+		<column name="students" type="Collection" entity="Student" mapping-table="Student_course"></column>
+		
+		<!-- Audit fields -->
+		<column name="createdOn" type="Date"></column>
+		<column name="createdBy" type="String"></column>
+		<column name="modifiedOn" type="Date"></column>
+		<column name="modifiedBy" type="String"></column>
+		
+		<!-- Order -->
+		<order by="asc">
+			<order-column name="cno"></order-column>
+		</order>
+		<!-- Finder methods -->
+		<finder name="courseName" return-type="Collection">
+			<finder-column name="cname"></finder-column>
+		</finder>
+		<finder name="courseFee" return-type="Collection">
+			<finder-column name="cfee"></finder-column>
+		</finder>
+	</entity>
+	<entity name="Address" local-service="true" remote-service="false">
+		<column name="addressId" type="long" primary="true" id-type="increment"></column>
+		<column name="doorNo" type="String"></column>
+		<column name="city" type="String"></column>
+		<column name="mandal" type="String"></column>
+		<column name="district" type="String"></column>
+		<column name="state" type="String"></column>
+		<column name="addCountry" type="String"></column>
+		<order by="asc">
+			<order-column name="addressId"></order-column>
+		</order>
+	</entity>
+	<entity name="Student" local-service="true" remote-service="false">
+		<column name="sno" type="long" primary="true" id-type="increment"></column>
+		<column name="firstName" type="String"></column>
+		<column name="middleName" type="String"></column>
+		<column name="lastName" type="String"></column>
+		<column name="gender" type="int"></column>
+		<column name="dateOfBirth" type="Date"></column>
+		<column name="email" type="String"></column>
+		<column name="emcetRank" type="long"></column>
+		<column name="dno" type="long"></column>
+		<column name="addressId" type="long"></column>
+		<column name="liferayUserId" type="long"></column>
+		<!-- Many to many relationships -->
+		<column name="courses" type="Collection" entity="Course" mapping-table="Student_course"></column>
+		<column name="parents" type="Collection" entity="Parent" mapping-table="Student_Parent"></column>
+		<!-- Audit fields -->
+		<column name="createdOn" type="Date"></column>
+		<column name="createdBy" type="String"></column>
+		<column name="modifiedOn" type="Date"></column>
+		<column name="modifiedBy" type="String"></column>
+		<!-- Order -->
+		<order by="asc">
+			<order-column name="sno"></order-column>
+		</order>
+		<finder name="studentFirstName" return-type="Collection">
+			<finder-column name="firstName"></finder-column>
+		</finder>
+		<finder name="studentNameDeptNo" return-type="Collection">
+			<finder-column name="firstName"></finder-column>
+			<finder-column name="dno"></finder-column>
+		</finder>
+		<finder return-type="Collection" name="departmentNo">
+			<finder-column name="dno"></finder-column>
+		</finder>
+	</entity>
+	<entity name="Invoice" local-service="true" remote-service="false">
+		<column name="invoiceId" type="long" primary="true" id-type="increment"></column>
+		<column name="amountPaid" type="long"></column>
+		<column name="paidDate" type="Date"></column>
+		<column name="sno" type="long"></column>
+		<!-- Audit fields -->
+		<column name="createdOn" type="Date"></column>
+		<column name="createdBy" type="String"></column>
+		<!-- Order -->
+		<order by="asc">
+			<order-column name="invoiceId"></order-column>
+		</order>
+	</entity>
+	<entity name="Parent" local-service="true" remote-service="false">
+		<column name="parentId" type="long" primary="true" id-type="increment"></column>
+		<column name="nickName" type="String"></column>
+		<column name="firstName" type="String"></column>
+		<column name="middleName" type="String"></column>
+		<column name="lastName" type="String"></column>
+		<column name="phNo" type="long"></column>
+		<column name="email" type="String"></column>
+		<column name="relationShip" type="String"></column>
+		<column name="students" type="Collection" entity="Student" mapping-table="Student_Parent"></column>
+		<!-- Audit fields -->
+		<column name="createdOn" type="Date"></column>
+		<column name="createdBy" type="String"></column>
+		<column name="modifiedOn" type="Date"></column>
+		<column name="modifiedBy" type="String"></column>
+		<!-- Order -->
+		<order by="asc">
+			<order-column name="parentId"></order-column>
+		</order>
+	</entity>
+	<entity name="Teacher" local-service="true" remote-service="false">
+		<column name="tid" type="long" primary="true" id-type="increment"></column>
+		<column name="firstName" type="String"></column>
+		<column name="middleName" type="String"></column>
+		<column name="lastName" type="String"></column>
+		<column name="gender" type="String"></column>
+		<column name="email" type="String"></column>
+		<column name="phno" type="long"></column>
+		<column name="liferayUserId" type="long"></column>
+		<order by="asc">
+			<order-column name="tid"></order-column>
+		</order>
+	</entity>
 </service-builder>

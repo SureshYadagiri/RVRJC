@@ -3,4 +3,7 @@
 
 <display>
 	
+	<category name="com.rvrjc">
+		<portlet id="course-management"></portlet>
+	</category>
 </display>

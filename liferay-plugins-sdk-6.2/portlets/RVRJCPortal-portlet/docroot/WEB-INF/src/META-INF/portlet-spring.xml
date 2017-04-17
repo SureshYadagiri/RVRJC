@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.rvrjc.portal.service.AddressLocalService" class="com.rvrjc.portal.service.impl.AddressLocalServiceImpl" />
+	<bean id="com.rvrjc.portal.service.persistence.AddressPersistence" class="com.rvrjc.portal.service.persistence.AddressPersistenceImpl" parent="basePersistence" />
+	<bean id="com.rvrjc.portal.service.CourseLocalService" class="com.rvrjc.portal.service.impl.CourseLocalServiceImpl" />
+	<bean id="com.rvrjc.portal.service.persistence.CoursePersistence" class="com.rvrjc.portal.service.persistence.CoursePersistenceImpl" parent="basePersistence" />
+	<bean id="com.rvrjc.portal.service.DepartmentLocalService" class="com.rvrjc.portal.service.impl.DepartmentLocalServiceImpl" />
+	<bean id="com.rvrjc.portal.service.persistence.DepartmentPersistence" class="com.rvrjc.portal.service.persistence.DepartmentPersistenceImpl" parent="basePersistence" />
+	<bean id="com.rvrjc.portal.service.InvoiceLocalService" class="com.rvrjc.portal.service.impl.InvoiceLocalServiceImpl" />
+	<bean id="com.rvrjc.portal.service.persistence.InvoicePersistence" class="com.rvrjc.portal.service.persistence.InvoicePersistenceImpl" parent="basePersistence" />
+	<bean id="com.rvrjc.portal.service.ParentLocalService" class="com.rvrjc.portal.service.impl.ParentLocalServiceImpl" />
+	<bean id="com.rvrjc.portal.service.persistence.ParentPersistence" class="com.rvrjc.portal.service.persistence.ParentPersistenceImpl" parent="basePersistence" />
+	<bean id="com.rvrjc.portal.service.StudentLocalService" class="com.rvrjc.portal.service.impl.StudentLocalServiceImpl" />
+	<bean id="com.rvrjc.portal.service.persistence.StudentPersistence" class="com.rvrjc.portal.service.persistence.StudentPersistenceImpl" parent="basePersistence" />
+	<bean id="com.rvrjc.portal.service.TeacherLocalService" class="com.rvrjc.portal.service.impl.TeacherLocalServiceImpl" />
+	<bean id="com.rvrjc.portal.service.persistence.TeacherPersistence" class="com.rvrjc.portal.service.persistence.TeacherPersistenceImpl" parent="basePersistence" />
+</beans>

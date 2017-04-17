@@ -6,8 +6,8 @@
 		module="RVRJCPortal-portlet"
 		revision="working@sureshhppc"
 		conf="internal"
-		confs="default, internal, provided, runtime, test"
-		date="20170414113607"/>
+		confs="default, internal, provided"
+		date="20170414120305"/>
 	<dependencies>
 	</dependencies>
 </ivy-report>

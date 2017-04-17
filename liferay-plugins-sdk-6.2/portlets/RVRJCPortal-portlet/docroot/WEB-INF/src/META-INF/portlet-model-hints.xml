@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.rvrjc.portal.model.Address">
+		<field name="addressId" type="long" />
+		<field name="doorNo" type="String" />
+		<field name="city" type="String" />
+		<field name="mandal" type="String" />
+		<field name="district" type="String" />
+		<field name="state" type="String" />
+		<field name="addCountry" type="String" />
+	</model>
+	<model name="com.rvrjc.portal.model.Course">
+		<field name="cno" type="long" />
+		<field name="ccode" type="String" />
+		<field name="cname" type="String" />
+		<field name="cfee" type="int" />
+		<field name="cdescription" type="String" />
+		<field name="createdOn" type="Date" />
+		<field name="createdBy" type="String" />
+		<field name="modifiedOn" type="Date" />
+		<field name="modifiedBy" type="String" />
+	</model>
+	<model name="com.rvrjc.portal.model.Department">
+		<field name="dno" type="long" />
+		<field name="dname" type="String" />
+		<field name="createdOn" type="Date" />
+		<field name="createdBy" type="String" />
+		<field name="modifiedOn" type="Date" />
+		<field name="modifiedBy" type="String" />
+	</model>
+	<model name="com.rvrjc.portal.model.Invoice">
+		<field name="invoiceId" type="long" />
+		<field name="amountPaid" type="long" />
+		<field name="paidDate" type="Date" />
+		<field name="sno" type="long" />
+		<field name="createdOn" type="Date" />
+		<field name="createdBy" type="String" />
+	</model>
+	<model name="com.rvrjc.portal.model.Parent">
+		<field name="parentId" type="long" />
+		<field name="nickName" type="String" />
+		<field name="firstName" type="String" />
+		<field name="middleName" type="String" />
+		<field name="lastName" type="String" />
+		<field name="phNo" type="long" />
+		<field name="email" type="String" />
+		<field name="relationShip" type="String" />
+		<field name="createdOn" type="Date" />
+		<field name="createdBy" type="String" />
+		<field name="modifiedOn" type="Date" />
+		<field name="modifiedBy" type="String" />
+	</model>
+	<model name="com.rvrjc.portal.model.Student">
+		<field name="sno" type="long" />
+		<field name="firstName" type="String" />
+		<field name="middleName" type="String" />
+		<field name="lastName" type="String" />
+		<field name="gender" type="int" />
+		<field name="dateOfBirth" type="Date" />
+		<field name="email" type="String" />
+		<field name="emcetRank" type="long" />
+		<field name="dno" type="long" />
+		<field name="addressId" type="long" />
+		<field name="liferayUserId" type="long" />
+		<field name="createdOn" type="Date" />
+		<field name="createdBy" type="String" />
+		<field name="modifiedOn" type="Date" />
+		<field name="modifiedBy" type="String" />
+	</model>
+	<model name="com.rvrjc.portal.model.Teacher">
+		<field name="tid" type="long" />
+		<field name="firstName" type="String" />
+		<field name="middleName" type="String" />
+		<field name="lastName" type="String" />
+		<field name="gender" type="String" />
+		<field name="email" type="String" />
+		<field name="phno" type="long" />
+		<field name="liferayUserId" type="long" />
+	</model>
+</model-hints>
