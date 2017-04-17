@@ -45,7 +45,7 @@ String currentURL =PortalUtil.getCurrentURL(request);
 				<portlet:param name="backURL" value="<%=currentURL %>"/>
 				<portlet:param name="mvcPath" value="/html/coursemanagement/course_details.jsp"/>
 		</liferay-portlet:renderURL>
-		<liferay-ui:search-container-row-parameter name="rowURL" value="<%= varRowURL.toString() %>"/>
+		<%-- <liferay-ui:search-container-row-parameter name="rowURL" value="<%= varRowURL.toString() %>"/> --%>
 		
 		
 	
