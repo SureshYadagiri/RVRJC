@@ -40,16 +40,16 @@ String currentURL =PortalUtil.getCurrentURL(request);
 	>
 		
 		
-		<liferay-portlet:renderURL varImpl="rowURL">
+		<liferay-portlet:renderURL varImpl="varRowURL">
 				<portlet:param name="cno" value="${course.cno}"/>
 				<portlet:param name="backURL" value="<%=currentURL %>"/>
 				<portlet:param name="mvcPath" value="/html/coursemanagement/course_details.jsp"/>
 		</liferay-portlet:renderURL>
-		<liferay-ui:search-container-row-parameter name="rowURL" value="<%= rowURL.toString() %>"/>
+		<liferay-ui:search-container-row-parameter name="rowURL" value="<%= varRowURL.toString() %>"/>
 		
 		
 	
-		<liferay-ui:search-container-column-text property="cno" name="header.cno"/>
+		<liferay-ui:search-container-column-text href="<%= varRowURL %>" property="cno" name="header.cno"/>
 		<liferay-ui:search-container-column-text property="ccode" name="header.ccode" />
 		<liferay-ui:search-container-column-text property="cname" name="header.cname" />
 		<liferay-ui:search-container-column-text property="cdescription" name="header.cdescription" />

@@ -17,7 +17,11 @@
   
   <h1>Course Information</h1>
   <br/>
+  <h2>course code :<%=course.getCcode()  %></h2>
   <h2>course Name :<%=course.getCname()  %></h2>
+  <h2>course Description :<%=course.getCdescription()  %></h2>
+  <h2>course Fee :<%=course.getCfee()  %></h2>
+  
   <h2>Created On :<%=course.getCreatedOn() %></h2>
     <h2>Created By : <%=course.getCreatedBy() %></h2>
       <h2>Modified On :<%=course.getModifiedOn() %></h2>
