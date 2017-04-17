@@ -5,5 +5,8 @@
 	
 	<category name="com.rvrjc">
 		<portlet id="course-management"></portlet>
+		<portlet id="parent-management"></portlet>
+		<portlet id="rvrjc-member-management"></portlet>
+		<portlet id="student-managment"></portlet>
 	</category>
 </display>
