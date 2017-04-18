@@ -8,4 +8,15 @@
 	</buildSpec>
 	<natures>
 	</natures>
+	<filteredResources>
+		<filter>
+			<id>1492527628746</id>
+			<name>liferay-plugins-sdk-6.2</name>
+			<type>26</type>
+			<matcher>
+				<id>org.eclipse.ui.ide.multiFilter</id>
+				<arguments>1.0-projectRelativePath-matches-false-true-.svn</arguments>
+			</matcher>
+		</filter>
+	</filteredResources>
 </projectDescription>
