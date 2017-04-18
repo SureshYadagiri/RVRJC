@@ -26,7 +26,7 @@
 
 
 <liferay-ui:icon-menu>
- <liferay-ui:icon  image="subscribe" message="UPDATE Student"   url="<%= updateStudentURL.toString() %>" />
+ <liferay-ui:icon  image="edit" message="EDIT Student"   url="<%= updateStudentURL.toString() %>" />
   <liferay-ui:icon-delete  message="DELETE Student"   url="<%= deleteStudentURL.toString() %>" />
 	 <liferay-ui:icon image="subscribe" message="INVOICE Student"   url="<%= invoiceStudentURL.toString() %>" />
 	

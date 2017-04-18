@@ -20,25 +20,25 @@
 
 <aui:form name="form" action="<%= addStudentURL %>" method="post">
   
-    <aui:fieldset column="true" label="Personal Details">  
-       <aui:input name="firstName"  >
+    <aui:fieldset column="true" label="label.title.personalDetails">  
+       <aui:input name="firstName" label="label.firstName" >
               <aui:validator name="required" />
               <aui:validator name="alpha" />
        </aui:input>
-       <aui:input name="middleName" >
+       <aui:input name="middleName" label="label.middleName" >
              
        </aui:input>
-       <aui:input name="lastName" >
+       <aui:input name="lastName" label="label.lastName" >
         <aui:validator name="required" />
               <aui:validator name="alpha" />
        </aui:input>
       
-       <aui:field-wrapper name="gender">
+       <aui:field-wrapper name="gender" label="label.gender">
 		<aui:input inlineLabel="right" name="gender" type="radio" value="0" label="Male" />
 		<aui:input checked="<%= true %>" inlineLabel="right" name="gender" type="radio" value="1" label="Female"  />
 </aui:field-wrapper>
 
-<aui:input name="dob" >
+<aui:input name="dob"  label="label.dob">
 
  <aui:validator name="date"></aui:validator>
 </aui:input>
@@ -46,23 +46,23 @@
 </aui:fieldset>
 
 &nbsp;&nbsp;&nbsp;
-       <aui:fieldset column="true" label="Contact Details">  
-       <aui:input name="email"  >
+       <aui:fieldset column="true" label="label.title.contactDetails">  
+       <aui:input name="email"  label="label.email">
            <aui:validator name="required" />
               <aui:validator name="email" />
        </aui:input>
        
-       <aui:input name="phno" >
+       <aui:input name="phno" label="label.phno">
            <aui:validator name="required" />
               <aui:validator name="digits"></aui:validator>
               <aui:validator name="minLength">10</aui:validator>
              
-             <aui:input name="emcetRank">
+             <aui:input name="emcetRank" label="label.emcetRank">
              <aui:validator name="number"></aui:validator>
              </aui:input>
        </aui:input>
     <div>
-         <aui:select name="dno" label="select Department"  class="form-control" showEmptyOption="false" column-width="50">
+         <aui:select name="dno" label="label.select.dept"  class="form-control" showEmptyOption="false" column-width="50">
          
          <aui:option value=" " ></aui:option>
            <%
@@ -97,25 +97,25 @@
        </aui:fieldset>
      
      
-        <aui:fieldset   column="true" title="Address" label="Address Details">
-       <aui:input name="doorNo" >
+        <aui:fieldset   column="true" title="Address" label="label.title.addr">
+       <aui:input name="doorNo" label="label.doorNo" >
               <aui:validator name="required" />
               
        </aui:input>
       
-       <aui:input name="city" >
+       <aui:input name="city" label="label.city">
               <aui:validator name="required" />
               <aui:validator name="alpha" />
        </aui:input>
-        <aui:input name="mandal">
+        <aui:input name="mandal" label="label.mandal">
               <aui:validator name="required" />
              
        </aui:input>
-        <aui:input name="district">
+        <aui:input name="district" label="label.district">
               <aui:validator name="required" />
              
        </aui:input>
-       <aui:select name="state" showEmptyOption="false">
+       <aui:select name="state" showEmptyOption="false" label="label.state">
      <aui:option value=" ">  </aui:option>
      <aui:option  value="ap">Andhra pradesh</aui:option>
      <aui:option  value="telangana">Telangana</aui:option>
@@ -123,13 +123,13 @@
        </aui:select>
      
              
-       <aui:input name="country" value="INDIA" readonly="readonly">
+       <aui:input name="country" value="INDIA" readonly="readonly" label="label.country">
               <aui:validator name="required" />
               <aui:validator name="alpha" />
        </aui:input>
        </aui:fieldset>
-       <aui:fieldset name="" column="true" label="Parent Details">  
-         <aui:select name="parent" class="form-control" id="state_id" multiple="true">
+       <aui:fieldset name="" column="true" label="label.title.parenDetails">  
+         <aui:select name="parent" label="label.parentName" class="form-control" id="state_id" multiple="true">
                 
                   <aui:option value=" " >  </aui:option>
              <%

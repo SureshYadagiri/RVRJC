@@ -19,29 +19,29 @@ long parentId=ParamUtil.getLong(request, "parentId");
   <aui:fieldset name="parent" column="true" label="label.parentdetails" >  
        
        <aui:input name="parentId" type="hidden" value="<%=parentId %>"></aui:input>
-       <aui:input name="firstName"  type="text"/>
+       <aui:input name="firstName"  type="text" label="label.firstName"/>
        
-       <aui:input name="middleName" type="text"/>
+       <aui:input name="middleName" type="text" label="label.middleName" />
              
        
-       <aui:input type="text" name="lastName" >
+       <aui:input type="text" name="lastName"  label="label.lastName">
        		 <aui:validator name="required" />
               <aui:validator name="alpha" />
        </aui:input>
        
-       <aui:input name="email" type="text" >
+       <aui:input name="email" type="text" label="label.email">
        	    <aui:validator name="required" />
               <aui:validator name="email" />
        </aui:input>
        
-       <aui:input name="phNo" type="text">
+       <aui:input name="phNo" type="text" label="label.phno">
         	  <aui:validator name="required" />
               <aui:validator name="digits"/>
               <aui:validator name="maxLength">10</aui:validator>
               <aui:validator name="minLength">10</aui:validator>
 		</aui:input>
       
-       <aui:input name="relationShip" type="text">
+       <aui:input name="relationShip" type="text" label="header.relationShip">
       		 <aui:validator name="required"/>
        </aui:input>       
        
