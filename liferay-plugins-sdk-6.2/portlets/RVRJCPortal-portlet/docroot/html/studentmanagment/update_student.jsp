@@ -25,33 +25,31 @@ List<Parent> parent=ParentLocalServiceUtil.getStudentParents(sno);
 
 <aui:fieldset column="true" label="personal Details">
 <aui:input name="sno" type="hidden"></aui:input>
-<aui:input name="firstName" type="text"></aui:input>
-<aui:input name="middleName" type="text"></aui:input>
-<aui:input name="lastName" type="text"></aui:input>
-<aui:field-wrapper name="gender">
+<aui:input name="firstName" type="text" label="label.firstName"></aui:input>
+<aui:input name="middleName" type="text" label="label.middleName"></aui:input>
+<aui:input name="lastName" type="text" label="label.lastName"></aui:input>
+<aui:field-wrapper name="gender" label="label.gender">
 		<aui:input inlineLabel="right" name="gender" type="radio" value="0" label="Male" />
 		<aui:input checked="<%= true %>" inlineLabel="right" name="gender" type="radio" value="1" label="Female"  />
 </aui:field-wrapper>
 
-<aui:input name="dob" type="text" ></aui:input>
+<aui:input name="dob" type="text" label="label.dob"></aui:input>
 </aui:fieldset>
- <aui:fieldset column="true" label="Contact Details">  
-       <aui:input name="email" type="text" >
+ <aui:fieldset column="true" label="label.title.contactDetails">  
+       <aui:input name="email" type="text" label="label.email" >
            
        </aui:input>
        
-       <aui:input name="phno" type="text">
+       <aui:input name="phno" type="text" label="label.phno">
           
          </aui:input>   
-             <aui:input name="emcetRank" type="text">
+             <aui:input name="emcetRank" type="text" label="label.emcetRank">
             
             
        </aui:input>
-       <aui:input name="liferayUserId">
-       <aui:validator name="required" ></aui:validator>
-       </aui:input>
+    
        
-     <aui:select name="dno" label="select Department"  class="form-control" showEmptyOption="false" column-width="50">
+     <aui:select name="dno" label="label.select.dept"  class="form-control" showEmptyOption="false" column-width="50">
          
          <aui:option value=" " ></aui:option>
            <%
@@ -80,26 +78,26 @@ List<Parent> parent=ParentLocalServiceUtil.getStudentParents(sno);
        </aui:fieldset>
        &nbsp;&nbsp;
      
-        <aui:fieldset   column="true" title="Address" label="Address Details">
-       <aui:input name="doorNo" >
+        <aui:fieldset   column="true" title="Address" label="label.title.addr">
+       <aui:input name="doorNo" label="label.doorNo">
              
               
        </aui:input>
       
-       <aui:input name="city" >
+       <aui:input name="city" label="label.city">
 
        </aui:input>
-        <aui:input name="mandal">
+        <aui:input name="mandal" label="label.mandal">
               
              
        </aui:input>
-        <aui:input name="district" type="text"   >        
+        <aui:input name="district" type="text" label="label.district"  >        
        </aui:input>
-       <aui:input name="state"  type="text">
+       <aui:input name="state"  type="text" label="label.state">
               
        </aui:input>
              
-       <aui:input name="country" value="INDIA" readonly="readonly" />
+       <aui:input name="country" value="INDIA" readonly="readonly"  label="label.country"/>
               
       
        </aui:fieldset>
@@ -107,9 +105,9 @@ List<Parent> parent=ParentLocalServiceUtil.getStudentParents(sno);
        
      
   
-        <aui:fieldset name="parent" column="true" label="Parent Details">  
+        <aui:fieldset name="parent" column="true" label="label.title.parenDetails">  
      
-       <aui:input name="name"  type="text" >
+       <aui:input name="name"  type="text" label="label.parentName">
              
       </aui:input>
        

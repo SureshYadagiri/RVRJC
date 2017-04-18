@@ -8,5 +8,7 @@
 		<portlet id="parent-management"></portlet>
 		<portlet id="rvrjc-member-management"></portlet>
 		<portlet id="student-managment"></portlet>
+		<portlet id="department-management"></portlet>
+		<portlet id="teacher-management"></portlet>
 	</category>
 </display>

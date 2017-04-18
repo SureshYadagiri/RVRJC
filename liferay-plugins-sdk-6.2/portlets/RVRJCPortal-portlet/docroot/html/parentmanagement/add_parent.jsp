@@ -10,19 +10,19 @@
   <aui:form action="<%=addParentURL %>" method="post" name="name">
   <aui:fieldset name="parent" column="true" label="label.parentdetails" >  
        
-       <aui:input name="firstName"  >
+       <aui:input name="firstName" label="label.firstName" >
               <aui:validator name="required" />
               <aui:validator name="alpha" />
        </aui:input>
        
-       <aui:input name="middleName" >
+       <aui:input name="middleName" label="label.middleName">
        </aui:input>
        
-       <aui:input name="lastName" >
+       <aui:input name="lastName" label="label.lastName" >
         <aui:validator name="required" />
               <aui:validator name="alpha" />
        </aui:input>
-       <aui:input name="email"  >
+       <aui:input name="email" label="label.email" >
            <aui:validator name="required" />
               <aui:validator name="email" />
        </aui:input>
@@ -32,7 +32,7 @@
               <aui:validator name="digits"></aui:validator>
               <aui:validator name="minLength">10</aui:validator>
               </aui:input>
-       <aui:input name="relationship">
+       <aui:input name="relationship" label="header.relationShip">
        <aui:validator name="required"></aui:validator>
        </aui:input>       
        
