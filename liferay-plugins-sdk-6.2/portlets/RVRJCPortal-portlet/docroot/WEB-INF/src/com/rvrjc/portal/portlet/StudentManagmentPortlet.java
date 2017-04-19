@@ -91,9 +91,12 @@ public class StudentManagmentPortlet extends MVCPortlet {
 	 			
 	 			ThemeDisplay td = (ThemeDisplay)actionRequest.getAttribute(WebKeys.THEME_DISPLAY);
 	 			Group siteGroup = td.getSiteGroup();
-	 			_log.info("siteGroup Name:" + siteGroup.getName());
+	 			_log.info("siteGroup Name:" + siteGroup.getName() +" group ID:" + siteGroup.getGroupId());
 	 			
-	 			//Group group = GroupLocalServiceUtil.getGroup(companyId, "RVRJC");
+	 			//We can also get Default Site name using Guest
+	 			Group group = GroupLocalServiceUtil.getGroup(companyId, "Guest");
+	 			_log.info("group Name:" + group.getName() +" groupID:" + group.getGroupId());
+	 			
 	 			long []groupIDS = {siteGroup.getGroupId() }; 
 	 			
 	 			Locale locale = Locale.getDefault();
