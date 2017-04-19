@@ -2,7 +2,21 @@
 <projectDescription>
 	<name>liferay-plugins-sdk-6.2</name>
 	<comment></comment>
-	<projects></projects>
-	<buildSpec></buildSpec>
-	<natures></natures>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+	</natures>
+	<filteredResources>
+		<filter>
+			<id>1492527718619</id>
+			<name></name>
+			<type>26</type>
+			<matcher>
+				<id>org.eclipse.ui.ide.multiFilter</id>
+				<arguments>1.0-name-matches-false-true-.ivy</arguments>
+			</matcher>
+		</filter>
+	</filteredResources>
 </projectDescription>
