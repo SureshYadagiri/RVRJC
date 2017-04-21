@@ -116,7 +116,7 @@ public class StudentManagmentPortlet extends MVCPortlet {
 	     
 	     //Date modifiedOn=ParamUtil.getDate(serviceContext, "modifiedOn", 'dd-mm-yyyy');
 	 			Address addr=AddressLocalServiceUtil.createAddress(0);
-	 		    //long addressId=addr.getAddressId();
+	 		    
 				
 	 		    addr.setDoorNo(doorNo);
 				addr.setCity(city);
@@ -124,8 +124,11 @@ public class StudentManagmentPortlet extends MVCPortlet {
 				addr.setDistrict(district);
 				addr.setState(state);
 				addr.setAddCountry(country);
+				
 				addr=AddressLocalServiceUtil.addAddress(addr);
-	     
+				
+				//long addressId=addr.getAddressId();
+				
 	     Student student=StudentLocalServiceUtil.createStudent(0);
 	   
 	    	 student.setFirstName(firstName);
@@ -136,6 +139,8 @@ public class StudentManagmentPortlet extends MVCPortlet {
 	    	 student.setEmail(email);
 	    	 student.setEmcetRank(emcetRank);
 	    	 student.setDno(dno);
+	  
+	    	 
 	    	 student.setAddressId(addr.getAddressId());
 	    	 
 	    	 
@@ -347,10 +352,11 @@ public class StudentManagmentPortlet extends MVCPortlet {
 		
 		
    	 long amountPaid=ParamUtil.getLong(actionRequest, "amountPaid");
-   	
-	     Student student = new StudentImpl();
-	     
-	     
+   	 
+   	 	 long sno=ParamUtil.getLong(actionRequest, "sno");
+   	  	 Student student = StudentLocalServiceUtil.getStudent(sno);
+	   
+  	 
 	     Invoice invoice=InvoiceLocalServiceUtil.createInvoice(0);
 	     invoice.setAmountPaid(amountPaid);
 	     invoice.setPaidDate(Calendar.getInstance().getTime());
@@ -358,6 +364,8 @@ public class StudentManagmentPortlet extends MVCPortlet {
 	     invoice.setCreatedBy(loggedInUser.getFullName());
 	     invoice.setCreatedOn(Calendar.getInstance().getTime());
 	     invoice=InvoiceLocalServiceUtil.addInvoice(invoice);   
+
+	
 	}
 	
 

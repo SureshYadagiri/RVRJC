@@ -2,6 +2,10 @@
 
 <h1> Student Fee </h1>
 
+<%
+long sno = ParamUtil.getLong(request, "sno");
+%>
+
 <portlet:actionURL var="invoiceStudentURL" name="addInvoice">
 </portlet:actionURL>
 
@@ -14,6 +18,10 @@
 
  <aui:fieldset column="true" label="Invoice Details">
        <aui:input name="amountPaid" >
+       
+       <aui:input name="sno" value="<%=sno %>" type="hidden"/>
+       
+       
        <aui:validator name="number"></aui:validator>
        </aui:input>
        
