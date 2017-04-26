@@ -20,7 +20,7 @@ public class ConfigurationActionImpl extends DefaultConfigurationAction {
         PortletConfig portletConfig, ActionRequest actionRequest,
         ActionResponse actionResponse) throws Exception {  
 
-    	//this one saves preferences to database
+    	//this one saves preferences to database - but not working
         super.processAction(portletConfig, actionRequest, actionResponse);
     	
     	  boolean ignoreNullPhoneNumberRecords = ParamUtil.getBoolean(actionRequest, "ignoreNullPhoneNumberRecords");
@@ -29,6 +29,8 @@ public class ConfigurationActionImpl extends DefaultConfigurationAction {
     	  _log.info("Form Parameters : ignoreNullPhoneNumberRecords=" + ignoreNullPhoneNumberRecords +  " deltaSize:" + deltaSize
           		+     " in ConfigurationActionImpl.processAction().");
     	  
+    	  
+    	 //Save the preferences 
         PortletPreferences portletPreferences = actionRequest.getPreferences();
         portletPreferences.setValue("ignoreNullPhoneNumberRecords",String.valueOf(ignoreNullPhoneNumberRecords));
         portletPreferences.setValue("deltaSize",String.valueOf(deltaSize));
