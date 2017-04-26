@@ -2,17 +2,11 @@
 <!DOCTYPE liferay-portlet-app PUBLIC "-//Liferay//DTD Portlet Application 6.2.0//EN" "http://www.liferay.com/dtd/liferay-portlet-app_6_2_0.dtd">
 
 <liferay-portlet-app>
-	<portlet>
-		<portlet-name>FileUploader</portlet-name>
-		<icon>/icon.png</icon>
-		 <configuration-action-class>com.samples.portlet.yourportlet.action.ConfigurationActionImpl</configuration-action-class>
-		<header-portlet-css>/css/main.css</header-portlet-css>
-		<footer-portlet-javascript>/js/main.js</footer-portlet-javascript>
-		<css-class-wrapper>FileUploader-portlet</css-class-wrapper>
-	</portlet>
+	
 	<portlet>
 		<portlet-name>file-upload</portlet-name>
 		<icon>/icon.png</icon>
+		<configuration-action-class>com.company.file.portlet.configuration.ConfigurationActionImpl</configuration-action-class>
 		<header-portlet-css>/css/main.css</header-portlet-css>
 		<footer-portlet-javascript>
 			/js/main.js

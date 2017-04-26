@@ -12,16 +12,19 @@
 <liferay-portlet:actionURL portletConfiguration="true" var="configurationURL" />
 
 <%
- boolean somePreferenceKey_cfg=GetterUtil.getBoolean(portletPreferences.getValue("preferenceKey",StringPool.TRUE));
+ boolean ignoreNullPhoneNumberRecords=GetterUtil.getBoolean(portletPreferences.getValue("ignoreNullPhoneNumberRecords",StringPool.TRUE));
+long deltaSize = GetterUtil.getLong(portletPreferences.getValue("deltaSize","10"));
 %>
 
 
 
 <aui:form action="<%= configurationURL %>" method="post" name="fm">
+    
     <aui:input name="<%= Constants.CMD %>" type="hidden" value="<%= Constants.UPDATE %>" />
 
     <!-- Preference control goes here -->
- <aui:input name="preferences--preferenceKey--" type="checkbox" value="<%= somePreferenceKey_cfg %>" label="Allow Phone number Empty" />
+ <aui:input name="ignoreNullPhoneNumberRecords" type="checkbox" value="<%= ignoreNullPhoneNumberRecords %>" label="Allow Phone number Empty" />
+ <aui:input name="deltaSize" type="text" value="<%= deltaSize %>" label="Enter Delta Size" />  
    
     <aui:button-row>
         <aui:button type="submit" />

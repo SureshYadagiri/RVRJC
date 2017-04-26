@@ -19,7 +19,8 @@ This is the <b>File Upload</b> portlet in View mode.
 <liferay-portlet:actionURL portletConfiguration="true" var="configurationURL" />
 
 <%
- boolean somePreferenceKey_cfg=GetterUtil.getBoolean(portletPreferences.getValue("preferenceKey",StringPool.TRUE));
+int deltaSize = GetterUtil.getInteger(portletPreferences.getValue("deltaSize","10"));
+
 %>
 
 
@@ -37,10 +38,14 @@ This is the <b>File Upload</b> portlet in View mode.
 </aui:form>
 
 
-<liferay-ui:search-container>
+<liferay-ui:search-container emptyResultsMessage="msg.file.records.empty" 
+delta="<%= deltaSize %>" 
+deltaConfigurable="<%= false %>"
+>
 	<liferay-ui:search-container-results
 		results="<%= EmployeeLocalServiceUtil.getEmployees(searchContainer.getStart(), searchContainer.getEnd()) %>"
 		total="<%= EmployeeLocalServiceUtil.getEmployeesCount() %>"
+		
 	/>
 
 	<liferay-ui:search-container-row
