@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.company.file.model.Employee">
+		<field name="empId" type="long" />
+		<field name="firstName" type="String" />
+		<field name="middleName" type="String" />
+		<field name="lastName" type="String" />
+		<field name="dateOfBirth" type="Date" />
+		<field name="gender" type="String" />
+		<field name="phno" type="long" />
+		<field name="email" type="String" />
+	</model>
+</model-hints>
